@@ -1,6 +1,6 @@
-# Telegram Onboarding Kit
+# L33TSP3AK HUB On-boarding
 
-[Telegram Onboarding Kit](https://github.com/Easterok/telegram-onboarding-kit) is a simple-to-use tool for crafting **onboardings** and **paywalls** for Telegram Bots. You can create pretty onboardings with minimal adjustments to our presets or easily create your own custom flows with our web components – thanks to **Telegram Mini Apps**.
+https://github.com/L33TSP3AK/Onboarding is a simple-to-use tool for crafting **onboardings** and **paywalls** for Telegram Bots. You can create pretty onboardings with minimal adjustments to our presets or easily create your own custom flows with our web components – thanks to **Telegram Mini Apps**.
 
 But why do you need it? Because onboarding/paywall is a **must-have attribute** of any mobile app – it offers a bright product presentation and seamless payment process. We believe Telegram Mini Apps will be used by millions of users in the future and this kit will help developers to turn their apps into real products!
 
@@ -58,10 +58,10 @@ MenuButton is a special button which appears on the left side of the text input 
 Now Menu Button with onboarding will appear in your bot.
 
 ### KeyboardButton
-Try KeyboardButton in action in our [Demo Bot](https://t.me/onboarding_kit_demo_bot). It utilizes Telegram's [KeyboardButton](https://core.telegram.org/type/KeyboardButton) with [Mini App URL](https://core.telegram.org/constructor/keyboardButtonSimpleWebView) inside.
+Try KeyboardButton in action in our [Demo Bot](https://t.me/Cash_Out_Assistant). It utilizes Telegram's [KeyboardButton](https://core.telegram.org/type/KeyboardButton) with [Mini App URL](https://core.telegram.org/constructor/keyboardButtonSimpleWebView) inside.
 
 
-Here's a snippet for `reply_markup` implemented with [python-telegram-bot](http://python-telegram-bot.readthedocs.io/) library (see full implementation in [bot.py](https://github.com/Easterok/telegram-onboarding-kit/blob/main/bot/bot.py#L81)):
+Here's a snippet for `reply_markup` implemented with [python-telegram-bot](http://python-telegram-bot.readthedocs.io/)
 ```python
 reply_markup = telegram.ReplyKeyboardMarkup.from_button(
    telegram.KeyboardButton(
@@ -71,7 +71,7 @@ reply_markup = telegram.ReplyKeyboardMarkup.from_button(
 )
 ```
 
-Note: KeyboardButton does't send any user data to Mini App (e.g. `language_code`). But you can send all the required data with HTTP GET parameters (see [this function](https://github.com/Easterok/telegram-onboarding-kit/blob/main/bot/bot.py#L51) as reference).
+Note: KeyboardButton does't send any user data to Mini App (e.g. `language_code`). But you can send all the required data with HTTP GET parameters
 
 ### Adding payments
 Good ending of onboarding is a **paywall**: User selects a product → Chooses payment method → Gets invoice in the chat. After the paywall the bot receives data about the selected product like:
