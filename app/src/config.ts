@@ -138,6 +138,67 @@ export default defineConfig({
           ],
           button: 'Next',
         },
+        // New Mini Store slide
+        {
+          extends: 'store',
+          media: {
+            type: 'sticker',
+            src: import('./assets/stickers/duck_shop.tgs'),
+            size: 200,
+          },
+          shape: 'square',
+          pagination: 'count',
+          title: 'L33TSP3AK Star Store',
+          description: "Spend your Telegram Stars on exclusive digital items!",
+          storeItems: [
+            {
+              id: 'premium_emote_pack',
+              title: 'Premium Emote Pack',
+              description: 'Unlock 50 exclusive Web3-themed emotes',
+              price: 500,
+              image: import('./assets/img/emote_pack_preview.webp'),
+            },
+            {
+              id: 'rare_nft_avatar',
+              title: 'Rare NFT Avatar',
+              description: 'Unique L33TSP3AK avatar for your profile',
+              price: 1000,
+              image: import('./assets/img/nft_avatar_preview.webp'),
+            },
+            {
+              id: 'custom_theme',
+              title: 'Custom Chat Theme',
+              description: 'Personalized Web3 theme for your chats',
+              price: 750,
+              image: import('./assets/img/custom_theme_preview.webp'),
+            },
+          ],
+          currency: {
+            name: 'Stars',
+            symbol: '⭐',
+          },
+          buyButtonText: 'Purchase for {price} ⭐',
+          insufficientFundsText: 'Not enough Stars',
+          successMessage: 'Item purchased successfully!',
+          button: 'Continue',
+        },
+
+        // Transition to paywall slide (moved after the new store slide)
+        {
+          media: {
+            type: 'sticker',
+            src: import('./assets/stickers/duck_knife.tgs'),
+            size: 250,
+          },
+          shape: 'square',
+          pagination: 'count',
+          textAlign: 'center',
+          title: 'Ready to dive deeper into Web3?',
+          description: "Let's explore premium features",
+          button: {
+            content: 'Go to Web3 Paywall',
+            to: '/paywall',
+          },
 
         // "everything is customizable" slide
         {
@@ -201,7 +262,7 @@ export default defineConfig({
         },
       ],
     },
-
+},
     // paywall
     {
       extends: 'paywall',
